@@ -1,0 +1,80 @@
+function getComp() {
+  return import('@/views/layout/Layout')
+}
+export const asyncRoute = {
+  /* 
+   *档口管理 
+   */
+  '/home' : () => getComp(),
+  'index' : () => import('@/views/stallManage/index'),
+  '/goods' : () => getComp(),
+  'goodList' : () => import('@/views/stallManage/goods/goodList'),
+  'goodStore' : () => import('@/views/stallManage/goods/goodStore'),
+  'authPage' : () => import('@/views/stallManage/goods/authPage'),
+  'categoryManage' : () => import('@/views/stallManage/goods/categoryManage'),
+  'goodClassify' : () => import('@/views/stallManage/goods/goodClassify'),
+  'goodSaleList' : () => import('@/views/stallManage/goods/goodSaleList'),
+  '/order' : () => getComp(),
+  'stallOrderList' : () => import('@/views/stallManage/order/orderList'),
+  'sales' : () => import('@/views/stallManage/order/orderList'),
+  'replenish' : () => import('@/views/stallManage/order/orderList'),
+  'retail' : () => import('@/views/stallManage/order/orderList'),
+  'refund' : () => import('@/views/stallManage/order/orderList'),
+  'fastReturn' : () => import('@/views/stallManage/order/orderList'),
+  'vipOrder' : () => import('@/views/stallManage/order/orderList'),
+  'shopOrder' : () => import('@/views/stallManage/order/shopOrder'),
+  '/finance' : () => getComp(),
+  'financeList' : () => import('@/views/stallManage/finance/financeList'),
+  'financeBind' : () => import('@/views/stallManage/finance/financeBind'),
+  '/customer' : () => getComp(),
+  'mallCustomer' : () => import('@/views/stallManage/customer/mallCustomer'),
+  'vipCustomer' : () => import('@/views/stallManage/customer/vipCustomer'),
+  // '/shop' : () => getComp(),
+  // 'shopList' : () => import('@/views/stallManage/shop/shopList'),
+  // 'shipmentFee' : () => import('@/views/stallManage/shop/shipmentFee'),
+  // 'staff' : () => import('@/views/stallManage/shop/staff'),
+  // 'workShift' : () => import('@/views/stallManage/shop/workShift'),
+  '/setting' : () => getComp(),
+  'pswSet' : () => import('@/views/stallManage/setting/pswSet'),
+  'shopDetail' : () => import('@/views/stallManage/setting/shopDetail'),
+  'childAccount' : () => import('@/views/stallManage/childAccount/accountList'),
+  'tips' : () => import('@/views/stallManage/setting/tips'),
+  '/marketing' : () => getComp(),
+  'marketingCenter' : () => import('@/views/stallManage/marketing/marketingCenter'),
+  '/sellData': () => getComp(),
+  'dailySell': () => import('@/views/stallManage/sellData/dailySell'),
+  'goodsales': () => import('@/views/stallManage/sellData/goodsales'),
+  'newGoodSale': () => import('@/views/stallManage/sellData/newGoodSale'),
+  'profitRank': () => import('@/views/stallManage/sellData/profitRank'),
+  'dailyProfit': () => import('@/views/stallManage/sellData/dailyProfit'),
+  '/stockManage': () => getComp(),
+  'storeManage': () => import('@/views/stallManage/storeManage/storeManage'),
+  'barcodePrint': () => import('@/views/stallManage/storeManage/barcodePrint'),
+  'stockRecord' : () => import('@/views/stallManage/storeManage/stockRecord')
+}
+export const asyncIcon = {
+  '/stockManage': '&#xe66a;',
+  '/tree' : '&#xe609;',
+  '/order' : '&#xe62b;',
+  '/finance' : '&#xe625;',
+  '/customer' : '&#xe632;',
+  '/shop' : '&#xe63f;',
+  '/user' : '&#xe6fe;',
+  '/goods' : '&#xe630;',
+  '/business' : '&#xe665;',
+  '/tradeArea' : '&#xe6d9;',
+  '/setting' : '&#xe646;',
+  '/operateFinance': '&#xe625;',
+  '/logistics': '&#xe607;',
+  '/createAccount': '&#xe8a8;',
+  '/editor': '&#xe62a;',
+  '/childAccount': '&#xe622;',
+  '/rankRecommend': '&#xe715;',
+  '/printSettings': '&#xe662;',
+  '/marketing': '&#xe765;',
+  '/sellData': '&#xe660;',
+  '/home': '&#xe641'
+}
+export const defaultRoute = [
+  { path: '*', redirect: '/welcome/index'}
+]
